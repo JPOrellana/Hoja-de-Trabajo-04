@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class ArraylistStack<T> extends Stack<T> {
     private ArrayList<T> core;
         
