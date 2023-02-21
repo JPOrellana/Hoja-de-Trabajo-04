@@ -48,7 +48,7 @@ public class ArraylistStack<T> extends Stack<T> {
         @Override
         /**
          * Cuenta los elementos de la pila
-         * @return Devuelve el tama�o de la pila
+         * @return Devuelve el tamaño de la pila
          */
         public int count() {
             return core.size();
