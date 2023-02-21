@@ -153,3 +153,53 @@ public class SimpleList<T> extends List<T>{
 	        }
 	        return null;
 		}
+
+        public T Get(int index) {
+			
+		    if (!IsEmpty()){
+	            if (index==0) {
+	                return start.getValue();
+	            }
+	            else if (index == (Count() -1)) {
+	                return end.getValue();
+	            }
+	            else if ((index > 0) && (index < (Count() - 1))) {
+	                Node<T> temp = start;
+	                int i = 0;
+	                while ((temp != null) && (i != index)) {
+	                    temp = temp.getNext();
+	                    i++;
+	                }
+
+	                if (temp!= null) {
+	                    return temp.getValue();
+	                }
+	                else {
+	                    return null;
+	                }
+	            }
+	            else{
+	                return null;
+	            }
+	        }
+	        return null;
+		}
+
+		@Override
+		/**
+	     * Verifica si la lista esta vacia
+	     * @return True si la lista esta vacia, false en caso contrario
+	     */
+		public boolean IsEmpty() {
+			return count== 0;
+		}
+
+		@Override
+		/**
+	     * Realiza el conteo de los elementos de la lista
+	     * @return Cantidad de elementos de la lista
+	     */
+		public int Count() {
+			return count;
+		}
+}
